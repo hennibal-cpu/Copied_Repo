@@ -3,22 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>Fancy Web Page</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a5b4fc, var(--primary));
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
-    
-    <p>This is a paragraph of text on a simple HTML page. HTML structures the content of the web.</p>
-    
-    <h2>Useful Links and Features</h2>
-    <ul>
-        <li>Easy to learn and deploy</li>
-        <li>Supported by all modern web browsers</li>
-        <li>Integrates seamlessly with CSS and JavaScript</li>
-    </ul>
-
-    <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> to learn more about web development.</p>
+    <div class="card">
+        <div class="profile-img">✨</div>
+        <h1>Alex Morgan</h1>
+        <div class="subtitle">Creative Developer</div>
+        <p>Crafting beautiful, interactive digital experiences with clean code and modern design interfaces.</p>
+        <a href="#" class="btn">Connect With Me</a>
+    </div>
 
 </body>
 </html>
